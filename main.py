@@ -9,8 +9,8 @@ PROD_ETH_URL = 'https://eth-mainnet.g.alchemy.com/v2/{}'.format("Ko-nQxxHOBt7OE7
 
 def json_rpc(method, params=[], do_print=False):
     headers = {'Content-Type': 'application/json'}
-    data = {'foo': 'bar', 'method': method, 'params': params, 'id': 1, 'jsonrpc': '2.0'}
-    res = requests.post(STG_ETH_URL, headers=headers, json=data, timeout=10)
+    data = {'ahan': 'testing', 'method': method, 'params': params, 'id': 1, 'jsonrpc': '2.0'}
+    res = requests.post(PROD_ETH_URL, headers=headers, json=data, timeout=10)
     if do_print:
         print(res.json())
     return res.json()
